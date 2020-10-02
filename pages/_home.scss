@@ -1,0 +1,61 @@
+.section-about {
+  background-color: #f7f7f7;
+  padding: 16rem 0;
+  margin-top: -23vh;
+}
+.section-features {
+  // height: 20vh;
+  padding: 13rem 1rem;
+  background-image: linear-gradient(to right bottom,rgba(0,0,0,0.7),rgba(27, 38, 34, 0.7)),url('back.jpeg');
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -12rem;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+.section-shows {
+  padding: 13rem 1rem;
+  background-color: #f7f7f7;
+  margin-top: -8rem;
+  font-size: 3rem;
+  padding-bottom: 4rem;
+}
+.section-stories {
+  // margin-top: -7rem;
+  position: relative;
+  overflow: hidden;
+}
+.section-signup {
+  background-color: black;
+  padding: 4rem 0;
+}
+.signup {
+  background-image: linear-gradient(105deg,rgba(#ffffff,.8) 0% , rgba(#ffffff,.8) 50% , transparent 50%) , url(../images/signup.jpg);
+  // height: 32rem;
+  background-size: cover;
+  &-form {
+    width: 50%;
+    padding: 3.5rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+  @include respond(tab-land) {
+    background-image: linear-gradient(105deg,rgba(#ffffff,.8) 0% , rgba(#ffffff,.8) 65% , transparent 65%) , url(../images/signup.jpg);
+  }
+  @include respond(tab-port) {
+    background-image: linear-gradient(rgba(#ffffff,.8) 0% , rgba(#ffffff,.8) 100% , transparent 100%) , url(../images/signup.jpg);
+  }
+  @media only screen and (max-width: 36.875em) {
+    width: 90%;
+    background-image: linear-gradient(rgba(#ffffff,.8) 0% , rgba(#ffffff,.8) 100% , transparent 100%), url(../images/signup.jpg);
+    margin: auto;
+  }
+
+}

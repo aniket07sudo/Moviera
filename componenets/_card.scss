@@ -1,0 +1,92 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 30rem;
+  position: relative;
+
+  &-side {
+      height: 30rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all .6s ease;
+    backface-visibility: hidden;
+    &-front {
+      background-color: black;
+    }
+    &-back {
+      transform: rotateY(180deg);
+        background-color: black;
+    }
+  }
+  &:hover &-side-front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &-side-back {
+    transform: rotateY(0);
+  }
+  &-details {
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    margin-top: -1rem;
+  }
+  &-heading {
+    margin-top: -1.5rem;
+    color: white;
+    font-weight:500;
+  }
+  &-picture {
+    background-size: cover;
+    height: 12rem;
+    margin-bottom: 1rem;
+
+    &-1 {
+      background-image: url(../images/card1.jpg);
+    }
+    &-2 {
+      background-image: url(../images/card2.jpg);
+    }
+    &-3 {
+      background-image: url(../images/card3.jpg);
+
+    }
+  }
+}
+
+//@include respond(tab-port) {
+@media only screen and (max-width:56.25em) ,
+  only screen and (hover:none) {
+  .card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    height: auto;
+    position: relative;
+
+    &-side {
+        height: auto;
+      position: relative;
+      backface-visibility: hidden;
+
+      &-back {
+        transform: rotateY(0);
+      }
+    }
+    &:hover &-side-front {
+      transform: rotateY(0);
+    }
+
+    &-details {
+      font-size: 1rem;
+      color: white;
+      padding: 1rem;
+      margin-top: -1rem;
+    }
+    &-heading {
+      margin-top: -1.5rem;
+      color: white;
+      font-weight:500;
+    }
+  }
+}

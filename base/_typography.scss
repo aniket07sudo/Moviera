@@ -1,0 +1,109 @@
+body {
+  font-family: 'Lato',sans-serif;
+  line-height: 1.7;
+  font-weight: 400;
+
+}
+.heading-primary {
+    text-transform: uppercase;
+    color: #ffffff;
+    backface-visibility: hidden;
+    margin-bottom: 40px;
+
+  &-main {
+    font-size: 60px;
+    letter-spacing: 20px;
+    display: block;
+    animation: moveInLeft 1s ease-out;
+
+  }
+  &-sub {
+    font-size: 25px;
+    display: block;
+    letter-spacing: 24.8px;
+    animation: moveInRight 1s ease-out;
+
+
+
+    }
+    @media only screen and (max-width: 50em) {
+      &-sub {
+        font-size: 20px;
+        letter-spacing: 15px;
+      }
+      &-main {
+        font-size: 45px;
+        letter-spacing: 10px;
+      }
+    }
+    @media only screen and (max-width: 23.43em) {
+      &-sub {
+        font-size: 12px;
+        letter-spacing: 8px;
+      }
+      &-main {
+        font-size: 22px;
+        letter-spacing: 5px;
+      }
+    }
+    @include respond(phone) {
+      &-sub {
+        font-size: 16px;
+      }
+      &-main {
+        font-size:30px;
+      }
+    }
+}
+.heading-secondary {
+  font-family: 'Merriweather', serif;
+  font-size: 2.18rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-image: linear-gradient(to right,#252525,#222831);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all .2s;
+
+  @media only screen and (max-width: 36.875em) {
+    margin-top: 2rem;
+  }
+  &:hover {
+    transform: skewY(5deg) skewX(5deg) scale(1.1);
+    background-image: linear-gradient(to right,#fd0054,#a7d129);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: .2rem .6rem 1rem rgba(#000000,0.5);
+  }
+
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
+  // @include respond(phone) {
+  //   // font-size: .9rem;
+  // }
+}
+.heading-tertiary {
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #888888;
+}
+h3 {
+    color: #000000;
+}
+.paragraph {
+  font-size: 1rem;
+  color: #a79b94;
+  font-weight: 400;
+
+  @include respond(phone) {
+    color: black;
+    font-size: 1.3rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
